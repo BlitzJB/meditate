@@ -1,5 +1,7 @@
-# meditate
+# Meditate
 Meditate is a guided meditation app i made for myself :))
+
+![logo](https://user-images.githubusercontent.com/88381529/190005781-3dd205ba-dfa1-438b-8776-ccb822e1a1cd.png)
 
 [Live](https://meditate.jb2k4.repl.co)
 
