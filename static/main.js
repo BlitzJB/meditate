@@ -12,6 +12,7 @@ document.addEventListener('DOMContentLoaded', () => {
             )
         })
     })
+    
 })
 
 let mounted = false
