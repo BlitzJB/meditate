@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Home</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="manifest" href="../manifest.json">
+    <link rel="stylesheet" href="../static/style.css">
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            console.log('DOMContentLoaded');
+            if ('serviceWorker' in navigator) {
+                console.log('CLIENT: service worker registration in progress.');
+                navigator.serviceWorker.register('../sw.js')
+                    .then(function(registration) {
+                        console.log('Service Worker Registered');
+                    })
+                    .catch(function(err) {
+                        console.log('Service Worker Failed', err);
+                    });
+            } else {
+                console.log('CLIENT: service worker is not supported.');
+            }
+        });
+    </script>
+
+<!-- <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Sulphur+Point:wght@700&display=swap" rel="stylesheet">
+ -->
+</head>
+<body class="scrollable">
+    <div class="container">
+        <div class="banner">
+            <img src="../static/banner.png" alt="relaxing banner" class="banner__image">
+        </div>
+        <div class="content">
+            <div class="streak">
+                You are on a 15 Day Streak!<br>
+                Keep it up! ✨
+            </div>
+            <div class="last_played__header">Last Played</div>
+            <div class="last_played__list scrollable">
+                <div class="last_played__item gradient1">
+                    <div class="last_played__item__label">
+                        Guided <br>Meditation
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚3 mins
+                    </div>
+                </div>
+                <div class="last_played__item gradient2">
+                    <div class="last_played__item__label">
+                        Body <br>Scanning
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚3 mins
+                    </div>
+                </div>
+                <div class="last_played__item gradient3">
+                    <div class="last_played__item__label">
+                        Relaxing <br>Sounds
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚15 mins
+                    </div>
+                </div>
+                <div class="last_played__item gradient1">
+                    <div class="last_played__item__label">
+                        Guided <br>Meditation
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚5 mins
+                    </div>
+                </div>
+                <div class="last_played__item gradient2">
+                    <div class="last_played__item__label">
+                        Body <br>Scanning
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚3 mins
+                    </div>
+                </div>
+                <div class="last_played__item gradient3">
+                    <div class="last_played__item__label">
+                        Guided <br>Meditation
+                    </div>
+                    <div class="last_played__item__duration">
+                        ⌚15 mins
+                    </div>
+                </div>
+            </div>
+            <div class="categories__header">
+                Categories
+            </div>
+            <div class="categories__list">
+                <div class="categories__item" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 5mins">
+                    <img src="../static/guidedmeditation.png" alt="guided meditation category">
+                    <div class="categories__label gradient1">Guided Meditation</div>
+                </div>
+                <div class="categories__item">
+                    <img src="../static/relax.png" alt="guided meditation category">
+                    <div class="categories__label gradient3">Relaxing Sounds</div>
+                </div>
+                <div class="categories__item">
+                    <img src="../static/guidedmeditation.png" alt="guided meditation category">
+                    <div class="categories__label gradient2">Body Scan</div>
+                </div>
+            </div>
+            <div class="startasession__header">
+                Start A Session
+            </div>
+            <div class="startasession__list">
+                <div class="startasession__itemheader">
+                    Guided Meditation
+                </div>
+                <div class="startasession__optionlist">
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">3m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">5m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">10m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">15m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">20m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">30m</div>
+                </div>
+                <div class="startasession__itemheader">
+                    Body Scan
+                </div>
+                <div class="startasession__optionlist">
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">3m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">5m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">10m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">15m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">20m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">30m</div>
+                </div>
+                <div class="startasession__itemheader">
+                    Relaxing Sounds
+                </div>
+                <div class="startasession__optionlist">
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">3m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">5m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">10m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">15m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">20m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">30m</div>
+                </div>
+                <div class="startasession__itemheader">
+                    Guided Meditation
+                </div>
+                <div class="startasession__optionlist">
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">3m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">5m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">10m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">15m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">20m</div>
+                    <div class="startasession__option" data-file="3m_guidedmeditation.mp3" data-name="Guided Meditation 3mins">30m</div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../static/main.js"></script>
+</body>
+</html>

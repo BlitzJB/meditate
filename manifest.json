@@ -1,0 +1,17 @@
+{
+    "name": "Meditate😌",
+    "short_name": "Meditate😌",
+    "start_url": "/?home=true",
+    "icons": [
+        {
+          "src": "static/logo.png",
+          "sizes": "192x192",
+          "type": "image/png",
+          "purpose": "any"
+        }
+      ],
+    "theme_color": "#000000",
+    "background_color": "#ffffff",
+    "display": "fullscreen",
+    "orientation": "any"
+}
